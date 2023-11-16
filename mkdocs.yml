@@ -4,5 +4,5 @@ theme:
   name: mkdocs
 
 nav:
-  - My notes: index.md
-  - Using mkdocs: using_mkdocs.md
+  - mkdocs basic: index.md
+  - setting up mkdocs: using_mkdocs.md
