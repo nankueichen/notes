@@ -1,8 +1,8 @@
 site_name: My notes
 
 theme:
-  name: mkdocs
+  name: material
 
 nav:
-  - mkdocs basic: index.md
-  - setting up mkdocs: using_mkdocs.md
+  - mkdocs: index.md
+#  - page: using_mkdocs.md

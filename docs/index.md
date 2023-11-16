@@ -1,17 +1,33 @@
-# Welcome to MkDocs
+# using mkdocs
+`2023-11-15`
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+I followed this [real python webpage](https://realpython.com/python-project-documentation-with-mkdocs/) to set up my mkdocs. The highlights are:
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+1. Everthing is located here: __Dropbox/mkdocs__
+2. Using virtual environment:
+	* `python3 -m venv venv`
+	* `source venv/bin/activate`
+3. Installing python modules:
+	* `python -m pip install mkdocs`
+	* `python -m pip install "mkdocstrings[python]"`
+	* `python -m pip install mkdocs-material`
+1. Pin the dependence
+	* `python -m pip freeze > requirements.txt` (see [here](https://realpython.com/python-virtual-environments-a-primer/#pin-your-dependencies))
+1. Create a new mkdocs folder __notes__ and organize the files there
+	* `mkdocs new notes`
+	* I then edited the automatically produced file __mkdocs.yml__
+	* In the future I could add more *md files to the __docs__ folder and update the __index.md__
+1. Start the live-reloading docs server
+	* `mkdocs serve`
+1. Optionally Build the documentation site
+	* `mkdocs build` 
+1. more information in [mkdocs.org](https://www.mkdocs.org). Also Print help message and exit
+	* `mkdocs -h`
+1. To back up files in github: 
+	* `git init`
+	* `git remote add origin https://github.com/nankueichen/notes.git`
+	* `git add .`
+	* `git commit -m "Add documentation"`
+	* `git branch -M main`
+	* `git push -u origin main` or using github Desktop to push
+	* Following these [instructions](https://squidfunk.github.io/mkdocs-material/publishing-your-site/) I could add a github workflow. Afterward, in __setting__ / __Pages__ of the github folder, I change the Branch to __gh-pages__ and location to __/doc__ ; Afterward this [site](https://nankueichen.github.io/notes/) is up and running.
