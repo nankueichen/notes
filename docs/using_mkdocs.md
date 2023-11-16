@@ -28,3 +28,6 @@ I followed this [real python webpage](https://realpython.com/python-project-docu
 	* `git remote add origin https://github.com/nankueichen/notes.git`
 	* `git add .`
 	* `git commit -m "Add documentation"`
+	* `git branch -M main`
+	* `git push -u origin main` or using github Desktop to push
+	* 
