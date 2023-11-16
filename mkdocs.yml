@@ -1,0 +1,8 @@
+site_name: My notes
+
+theme:
+  name: mkdocs
+
+nav:
+  - My notes: index.md
+  - Using mkdocs: using_mkdocs.md
