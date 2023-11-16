@@ -26,3 +26,5 @@ I followed this [real python webpage](https://realpython.com/python-project-docu
 1. To back up files in github: 
 	* `git init`
 	* `git remote add origin https://github.com/nankueichen/notes.git`
+	* `git add .`
+	* `git commit -m "Add documentation"`
