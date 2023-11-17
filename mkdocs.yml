@@ -5,6 +5,7 @@ theme:
 
 nav:
   - mkdocs: index.md
+  - jupyterbook: using_jupyterbook.md
 #  - page: using_mkdocs.md
 
 markdown_extensions:

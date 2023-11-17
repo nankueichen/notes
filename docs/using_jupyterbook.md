@@ -24,4 +24,4 @@ I followed this [tutorial](https://jupyterbook.org/en/stable/start/overview.html
 	* `git add .`
 	* `git commit -m "Add documentation"`
 	* `git push -u origin main` or using github Desktop to push
-	* Following these [instructions](https://squidfunk.github.io/mkdocs-material/publishing-your-site/) I could add a github workflow. Afterward, in __setting__ / __Pages__ of the github folder, I change the Branch to __gh-pages__ and location to __/doc__ ; Afterward this [site](https://nankueichen.github.io/notes/) is up and running.
+1. To host the book in _readthedocs_, I followed this [link](https://jupyterbook.org/en/stable/publish/readthedocs.html) and added a __.readthedocs.yml__ file. Note that there is another [link](https://jbtest.readthedocs.io/en/latest/intro.html).
