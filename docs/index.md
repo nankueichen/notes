@@ -30,4 +30,4 @@ I followed this [real python webpage](https://realpython.com/python-project-docu
 	* `git commit -m "Add documentation"`
 	* `git branch -M main`
 	* `git push -u origin main` or using github Desktop to push
-	* Following these [instructions](https://squidfunk.github.io/mkdocs-material/publishing-your-site/) I could add a github workflow. Afterward, in __setting__ / __Pages__ of the github folder, I change the Branch to __gh-pages__ and location to __/doc__ ; Afterward this [site](https://nankueichen.github.io/notes/) is up and running.
+	* Following these [instructions](https://squidfunk.github.io/mkdocs-material/publishing-your-site/) I could add a github workflow. Afterward, in __setting__ / __Pages__ of the github folder, I change the Branch to __main__ and location to __/doc__ ; Afterward this [site](https://nankueichen.github.io/notes/) is up and running.
