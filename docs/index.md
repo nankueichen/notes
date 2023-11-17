@@ -25,11 +25,12 @@ I followed this [real python webpage](https://realpython.com/python-project-docu
 	* `mkdocs -h`
 1. To back up files in github: 
 	* `git init`
-	* `git remote add origin https://github.com/nankueichen/notes.git`
+	* `git remote add origin https://github.com/<user name>/notes.git`
 	* `git add .`
 	* `git commit -m "Add documentation"`
 	* `git branch -M main`
 	* `git push -u origin main` or using github Desktop to push
-	* Following these [instructions](https://squidfunk.github.io/mkdocs-material/publishing-your-site/) I could add a github workflow. Afterward, in __setting__ / __Pages__ of the github folder, I change the Branch to __main__ and location to __/doc__ ; Afterward this [site](https://nankueichen.github.io/notes/) is up and running.
+	* Following these [instructions](https://squidfunk.github.io/mkdocs-material/publishing-your-site/) I could add a github workflow. Afterward, in __setting__ / __Pages__ of the github folder, I change the Branch to __main__ and location to __/doc__ ; Afterward the github site is up and running.
+	* I then add __.readthedocs.yaml__ and __requirements.txt__ so that the document can be built in _readthedocs.io_ website.
 
 Try the math here $\alpha$, $\gamma$
