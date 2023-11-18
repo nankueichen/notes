@@ -20,7 +20,7 @@ I followed this [tutorial](https://jupyterbook.org/en/stable/start/overview.html
 	* `jupyter-book build lipidMRI`
 1. To back up files and publish the book in github, following [this](https://jupyterbook.org/en/stable/start/publish.html)
 	* `git init`
-	* `git remote add origin https://github.com/nankueichen/lipidMRI.git`
+	* `git remote add origin https://github.com/[user name]/lipidMRI.git`
 	* `git add .`
 	* `git commit -m "Add documentation"`
 	* `git push -u origin main` or using github Desktop to push
