@@ -4,8 +4,10 @@ theme:
   name: material
 
 nav:
-  - mkdocs: index.md
+  - links: links.md
+  - mkdocs: using_mkdocs.md
   - jupyterbook: using_jupyterbook.md
+  - ASL denoising: asl_denoising.md
 #  - page: using_mkdocs.md
 
 markdown_extensions:

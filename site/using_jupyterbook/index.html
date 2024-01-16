@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="..">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>using mkdocs - My notes</title>
+        <title>jupyterbook - My notes</title>
       
     
     
@@ -61,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-mkdocs" class="md-skip">
+        <a href="#using-jupyterbook" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              using mkdocs
+              jupyterbook
             
           </span>
         </div>
@@ -203,9 +205,18 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../using_jupyterbook/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -214,6 +225,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -251,54 +263,44 @@
                   
 
 
-<h1 id="using-mkdocs">using mkdocs</h1>
-<p><code>2023-11-15</code></p>
-<p>I followed this <a href="https://realpython.com/python-project-documentation-with-mkdocs/">real python webpage</a> to set up my mkdocs. The highlights are:</p>
+<h1 id="using-jupyterbook">using jupyterbook</h1>
+<p><code>2023-11-17</code></p>
+<p>I followed this <a href="https://jupyterbook.org/en/stable/start/overview.html">tutorial</a> to set up my jupyterbook. The highlights are:</p>
 <ol>
-<li>Everthing is located here: <strong>Dropbox/mkdocs</strong></li>
+<li>Everthing is located here: <strong>Dropbox/jupyterbook</strong></li>
 <li>Using virtual environment:<ul>
 <li><code>python3 -m venv venv</code></li>
 <li><code>source venv/bin/activate</code></li>
 </ul>
 </li>
 <li>Installing python modules:<ul>
-<li><code>python -m pip install mkdocs</code></li>
-<li><code>python -m pip install "mkdocstrings[python]"</code></li>
-<li><code>python -m pip install mkdocs-material</code></li>
+<li><code>python -m pip install jupyter-book</code></li>
 </ul>
 </li>
 <li>Pin the dependence<ul>
-<li><code>python -m pip freeze &gt; requirements.txt</code> (see <a href="https://realpython.com/python-virtual-environments-a-primer/#pin-your-dependencies">here</a>)</li>
+<li><code>python -m pip freeze &gt; requirements.txt</code></li>
 </ul>
 </li>
-<li>Create a new mkdocs folder <strong>notes</strong> and organize the files there<ul>
-<li><code>mkdocs new notes</code></li>
-<li>I then edited the automatically produced file <strong>mkdocs.yml</strong></li>
-<li>In the future I could add more *md files to the <strong>docs</strong> folder and update the <strong>index.md</strong></li>
+<li>Create a new folder <strong>lipidMRI</strong> and organize the files there<ul>
+<li><code>jupyter-book create lipidMRI</code></li>
+<li>I then edited the automatically produced <em>book configuration</em> file _config.yml</li>
+<li>I then edited the automatically produced <em>Table of Contents</em> file _toc.yml . This is a YAML file with a collection of pages, each one linking to a file in the book.</li>
+<li>Book content: A collection of text files make up your book’s content. These can be one of several types of files, such as markdown (<code>.md</code>) and Jupyter Notebooks (<code>.ipynb</code>), and MyST markdown (<code>.md</code>) that is discussed <a href="https://myst-nb.readthedocs.io/en/v0.9.1/use/markdown.html#:~:text=MyST%20Markdown%20Notebooks%20allow%20you,use%20with%20text%2Dbased%20tools.">here</a>. For example, <code>:::{note}</code> is a directive in MyST Markdown.</li>
 </ul>
 </li>
-<li>Start the live-reloading docs server<ul>
-<li><code>mkdocs serve</code></li>
+<li>Now it’s time to build outputs for the book, using the <code>jupyter-book build</code> command line tool for this.<ul>
+<li><code>jupyter-book build lipidMRI</code></li>
 </ul>
 </li>
-<li>Optionally Build the documentation site<ul>
-<li><code>mkdocs build</code> </li>
-</ul>
-</li>
-<li>more information in <a href="https://www.mkdocs.org">mkdocs.org</a>. Also Print help message and exit<ul>
-<li><code>mkdocs -h</code></li>
-</ul>
-</li>
-<li>To back up files in github: <ul>
+<li>To back up files and publish the book in github, following <a href="https://jupyterbook.org/en/stable/start/publish.html">this</a><ul>
 <li><code>git init</code></li>
-<li><code>git remote add origin https://github.com/nankueichen/notes.git</code></li>
+<li><code>git remote add origin https://github.com/[user name]/lipidMRI.git</code></li>
 <li><code>git add .</code></li>
 <li><code>git commit -m "Add documentation"</code></li>
-<li><code>git branch -M main</code></li>
 <li><code>git push -u origin main</code> or using github Desktop to push</li>
-<li>Following these <a href="https://squidfunk.github.io/mkdocs-material/publishing-your-site/">instructions</a> I could add a github workflow. Afterward, in <strong>setting</strong> / <strong>Pages</strong> of the github folder, I change the Branch to <strong>gh-pages</strong> and location to <strong>/doc</strong> ; Afterward this <a href="https://nankueichen.github.io/notes/">site</a> is up and running.</li>
 </ul>
 </li>
+<li>To host the book in <em>readthedocs</em>, I followed this <a href="https://jbtest.readthedocs.io/en/latest/intro.html">link</a> and added a <strong>.readthedocs.yml</strong> file.</li>
 </ol>
 
 
