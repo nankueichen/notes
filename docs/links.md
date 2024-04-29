@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/nankueichen/figures/raw/781e36cbd0f8bbe54740f615d31b805e84d63335/nk391.jpg" width="600" alt="Pulseq logo"></img>
+<img src="https://github.com/nankueichen/figures/raw/49ce7d148ed995432707c83d114ac022afed8457/MRI.png" width="400" alt="Pulseq logo"></img>
 </a>
 </div>
 
