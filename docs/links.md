@@ -1,4 +1,11 @@
+<div align="center">
+<img src="https://github.com/nankueichen/figures/raw/781e36cbd0f8bbe54740f615d31b805e84d63335/nk391.jpg" width="600" alt="Pulseq logo"></img>
+</a>
+</div>
+
+
 # Links
+
 `2024-04-28`
 
 * [machine learnng : build chat GPT](https://youtu.be/kCc8FmEb1nY?si=ICF4mE8thFCAOaGA)
