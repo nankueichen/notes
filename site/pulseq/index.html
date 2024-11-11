@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../using_mkdocs/">
+        <link rel="prev" href="../asl_denoising/">
       
-      
-        <link rel="next" href="../asl_denoising/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>jupyterbook - Nan-kuei</title>
+        <title>GUI for pulseq programming - Nan-kuei</title>
       
     
     
@@ -62,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-jupyterbook" class="md-skip">
+        <a href="#gui-for-pulseq-programming" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              jupyterbook
+              GUI for pulseq programming
             
           </span>
         </div>
@@ -228,19 +226,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../using_jupyterbook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -249,7 +238,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -278,10 +266,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pulseq/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -290,6 +287,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -327,45 +325,56 @@
                   
 
 
-<h1 id="using-jupyterbook">using jupyterbook</h1>
-<p><code>2023-11-17</code></p>
-<p>I followed this <a href="https://jupyterbook.org/en/stable/start/overview.html">tutorial</a> to set up my jupyterbook. The highlights are:</p>
-<ol>
-<li>Everthing is located here: <strong>Dropbox/jupyterbook</strong></li>
-<li>Using virtual environment:<ul>
-<li><code>python3 -m venv venv</code></li>
-<li><code>source venv/bin/activate</code></li>
+<h1 id="gui-for-pulseq-programming">GUI for pulseq programming</h1>
+<p><code>2024-11-10</code></p>
+<ul>
+<li>
+<p>my thoughts so far</p>
+<ul>
+<li>I will first use Dash to write a GUI for creating MRI pulse sequences; probably in the format of PANDAS data frame</li>
+<li>I will use plotly to display sequences</li>
 </ul>
 </li>
-<li>Installing python modules:<ul>
-<li><code>python -m pip install jupyter-book</code></li>
+<li>
+<p>Some work has been done by other groups:</p>
+<ul>
+<li><a href="https://www.linkedin.com/in/nckz/?trk=organization_guest_main-feed-card-text">by Nickolas Zwart</a></li>
+<li><a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/mrm.25528">paper from 2015</a></li>
+<li><a href="https://github.com/gpilab">gpilab github</a></li>
+<li><a href="https://github.com/mirc-dsi/pulseq-gpi?tab=readme-ov-file">pulseq-gpi github</a></li>
+<li><a href="https://doi.org/10.1016/j.mri.2018.03.008">pulseq-gpi paper from 2018</a></li>
+<li><a href="https://github.com/imr-framework">work from pypulseq group</a></li>
 </ul>
 </li>
-<li>Pin the dependence<ul>
-<li><code>python -m pip freeze &gt; requirements.txt</code></li>
+<li>
+<p>I think Dash (based on Flask) is a good platform to use. There have been some successful examples that use Flask or Dash:</p>
+<ul>
+<li>Airbnb, Lyft, Uber, LinkedIn, Netflix (Flask)</li>
+<li><a href="https://uploads-ssl.webflow.com/60ec41d92eafa807b2ca1ddd/61c0ba159578d1eca0f60fe3_Final_AIOimpactBrochure.pdf">AIO impact</a></li>
+<li><a href="https://quiniwine.com/#/tasting-app">QUINI</a></li>
+<li><a href="https://www.neuroblu.ai">NeuroBlu</a></li>
 </ul>
 </li>
-<li>Create a new folder <strong>lipidMRI</strong> and organize the files there<ul>
-<li><code>jupyter-book create lipidMRI</code></li>
-<li>I then edited the automatically produced <em>book configuration</em> file _config.yml</li>
-<li>I then edited the automatically produced <em>Table of Contents</em> file _toc.yml . This is a YAML file with a collection of pages, each one linking to a file in the book.</li>
-<li>Book content: A collection of text files make up your book’s content. These can be one of several types of files, such as markdown (<code>.md</code>) and Jupyter Notebooks (<code>.ipynb</code>), and MyST markdown (<code>.md</code>) that is discussed <a href="https://myst-nb.readthedocs.io/en/v0.9.1/use/markdown.html#:~:text=MyST%20Markdown%20Notebooks%20allow%20you,use%20with%20text%2Dbased%20tools.">here</a>. For example, <code>:::{note}</code> is a directive in MyST Markdown.</li>
+<li>
+<p>The APP could be sited in several places, such as</p>
+<ul>
+<li><a href="https://www.pythonanywhere.com">pythonanywhere</a></li>
 </ul>
 </li>
-<li>Now it’s time to build outputs for the book, using the <code>jupyter-book build</code> command line tool for this.<ul>
-<li><code>jupyter-book build lipidMRI</code></li>
+<li>
+<p>Some useful resources of learning python, Dash, Plotly, Flask</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators">https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Decorators</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3">https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3</a></li>
 </ul>
 </li>
-<li>To back up files and publish the book in github, following <a href="https://jupyterbook.org/en/stable/start/publish.html">this</a><ul>
-<li><code>git init</code></li>
-<li><code>git remote add origin https://github.com/[user name]/lipidMRI.git</code></li>
-<li><code>git add .</code></li>
-<li><code>git commit -m "Add documentation"</code></li>
-<li><code>git push -u origin main</code> or using github Desktop to push</li>
+<li>
+<p>Companies that commericialize MRI technologies</p>
+<ul>
+<li><a href="https://synexmedical.com">Synex for MRS-based glucose monitoring</a></li>
 </ul>
 </li>
-<li>To host the book in <em>readthedocs</em>, I followed this <a href="https://jbtest.readthedocs.io/en/latest/intro.html">link</a> and added a <strong>.readthedocs.yml</strong> file.</li>
-</ol>
+</ul>
 
 
 

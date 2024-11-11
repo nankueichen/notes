@@ -1,13 +1,15 @@
-site_name: My notes
+site_name: Nan-kuei
 
 theme:
   name: material
+#  name: readthedocs
 
 nav:
   - links: links.md
   - mkdocs: using_mkdocs.md
   - jupyterbook: using_jupyterbook.md
   - ASL denoising: asl_denoising.md
+  - GUI for pulseq programming: pulseq.md
 #  - page: using_mkdocs.md
 
 markdown_extensions:
